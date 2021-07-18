@@ -1,55 +1,47 @@
 // Dependencies
-let db = require ('../db/db.json');
-let fs = require ('fs');
-
+const db ='db/db.json';
+const fs = require ('fs');
 
 // Module exports and API apiRoutes
-module.exports = function (app) {
+module.exports =(app)=> {
 
     // Setting up GET /api/notes that reads db file and returns parsed JSON notes
     app.get('/api/notes', (req, res) => {
-        res.send(JSON.parse(fs.readFile(db)));
-        }
+        let savedNotes=fs.readFileSync(db) 
+        return res.json(JSON.parse(savedNotes));
+        } 
     );
     
 
     //Setting up POST route request
     app.post('/api/notes', (req, res) => {
+        let savedNotes=fs.readFileSync(db) 
+        savedNotes=JSON.parse(savedNotes);
+            savedNotes.push(req.body);
+            
+            for (let i = 0; i < savedNotes.length; i++) {
+                savedNotes[i].id = i+1;
+            }
 
-        //creating variables that would be put in an array
-        let notesData= JSON.parse(fs.readFileSync(db));
+            fs.writeFileSync(db, JSON.stringify(savedNotes));
+                return res.send(db, savedNotes);
 
-        //Creating new notes
-        let newNote = req.body;
-        console.log(newNote);
-
-        newNote.id=notesData.length;
-
-        //Pushing new notes into the notes object
-        notesData.push(newNote);
-
-        //converting data back into a string
-        fs.writeFileSync(db, JSON.stringify(notesData));
-
-        // Respond with the notes parsed as a string
-        res.json(notesData);
-    })
+    });
 
 
     //Setting up DELETE route requests
     app.delete('/api/notes/:id', (req, res)=>{
         
         const {id}= req.params;
-        let indexToDelete= data.filter((each) => each.id != id);
+        let notes=fs.readFileSync(db) 
+        notes=JSON.parse(notes);
+        let indexToDelete= notes.filter((each) => each.id != id);
 
         if(!indexToDelete){
             return res.status(404).json({error: 'No note with that id'});
         }
-        
-        let data = indexToDelete;
 
-        fs.writeFile(db, JSON.stringify(data));
-    });
-
-
+        fs.writeFileSync(db, JSON.stringify(indexToDelete))
+            res.send(db, indexToDelete);
+        });
 };
