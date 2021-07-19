@@ -50,13 +50,13 @@ This is what the application looks like:
 
 Landing Page: 
 
-<img src="./public/assets/img/landingPage.png" alt="Landing Page" style="height: auto ; width:30rem;"/>
+<img src="./public/assets/img/landingPage.png" alt="Landing Page" style="height: auto ; width:20 rem;"/>
 
 
 
 Notes Page:
 
-<img src="./public/assets/img/notesPage.png" alt="Notes Page" style="height: auto ; width:30rem;"/>
+<img src="./public/assets/img/notesPage.png" alt="Notes Page" style="height: auto ; width:20 rem;"/>
 
 ## Usage
 
