@@ -3,9 +3,9 @@
 # Note Taker Application
 
 
-Built with Express
+Built with Express.js
 
-URL of the Heroku deployed application:
+URL of the Heroku deployed application: https://cryptic-hollows-97583.herokuapp.com/
 
 URL of the GitHub repository: https://github.com/rubiocode/Note-Taker
 
@@ -44,7 +44,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## View
 
-To view the Heroku deployed webpage click [here]().
+To view the Heroku deployed webpage click [here](https://cryptic-hollows-97583.herokuapp.com/).
 
 This is what the application looks like:
 
