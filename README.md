@@ -5,7 +5,7 @@
 
 Built with Express
 
-URL of the deployed application:
+URL of the Heroku deployed application:
 
 URL of the GitHub repository: https://github.com/rubiocode/Note-Taker
 
@@ -44,7 +44,19 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## View
 
-To view the website, you can click [here]().
+To view the Heroku deployed webpage click [here]().
+
+This is what the application looks like:
+
+Landing Page: 
+
+<img src="./public/assets/img/landingPage.png" alt="Landing Page" style="height: auto ; width:30rem;"/>
+
+
+
+Notes Page:
+
+<img src="./public/assets/img/notesPage.png" alt="Notes Page" style="height: auto ; width:30rem;"/>
 
 ## Usage
 
@@ -53,11 +65,20 @@ In this _Note Taker_ application, the user can write, save, view, and delete not
 
 ## Built With
 
-* [Express](https://expressjs.com/) - A Node.js web application server framework used to build web applications. 
+All backend code built with:
+
+* [Express](https://expressjs.com/) - A Node.js web application server framework used to build web applications.
+
+* [FS](https://nodejs.org/dist/latest-v14.x/docs/api/fs.html) - File system module allows the user to interact and work with the file system in the user's computer.
+
+* [JavaScript ES6](https://www.w3schools.com/Js/js_es6.asp) - Programming language that creates dynamic website content. ES6 or ECMAScript 6 was the second major revision to JavaScript.
+
+* [Node.js](https://nodejs.dev/learn/) - Node.js is an open-source, low-level, back-end JavaScript runtime platform that uses asynchronous programming and is a popular tool for almost any kind of project!. 
+ 
 
 ## Credits
 
-Frontend code created by © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+All frontend code created by © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
 ## License
 
